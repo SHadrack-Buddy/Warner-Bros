@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>   <!--The Root Element-->
+
+
+<!--The Head Section-->
+    <head>
+
+        <title>Warner Bros</title>
+            
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!--Bootstrap-->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!--The External Style Sheet link-->
+        <link rel="stylesheet" href="MyStyles.css">
+        
+
+        <!--The CSS Styling-->
+
+        
+        <style>
+          /* CSS styling for the form */
+            .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+.hidden {
+    display: none;
+}
+
+#successMessage {
+    text-align: center;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+}
+        
+        
+        </style>
+
+        <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    var feedbackData = {};
+    formData.forEach(function(value, key){
+        feedbackData[key] = value;
+    });
+    var jsonData = JSON.stringify(feedbackData);
+    
+    // Simulate sending feedback data to the server
+    setTimeout(function() {
+        document.getElementById("feedbackForm").reset();
+        document.getElementById("successMessage").classList.remove("hidden");
+        setTimeout(function() {
+            document.getElementById("successMessage").classList.add("hidden");
+        }, 3000);
+    }, 1000);
+});
+
+        </script>
+
+    </head>
+
+
+
+<!--The Body Section-->
+   <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+
+            <li><img src="IMAGES/warnerlogo.jfif" width="40px" height="40px" alt="Warner Bros Logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="MOVIES.html">Movies</a></li>
+            <li><a href="TV Shows.html">TV shows</a></li>
+            <li><a href="GAMES & APPS.html">Games & Apps</a></li>
+            <li><a href="NEWS.html">News</a></li>
+            <li><a href="SHOP.html">Shop</a></li>
+            <li><a href="BRANDS.html">Brands</a></li>
+            <li><a href="EXPERIENCE.html">Experiences</a></li>
+            <li><a href="FEEDBACK.html">Feedback</a></li>
+            <li><a href="ABOUT.html">About Us</a></li>
+      
+          </ul>
+
+          
+          
+          <form class="form-inline my-2 my-lg-0">
+            <label for="search-input" class="sr-only">Search</label>
+            <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Explore Our World" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+<!----------=================================================================================================================================-->
+
+<!--The user feedback form-->
+<h2>Give Us Your Thoughts</h2>
+       <div class="container">
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" required>
+            
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage" class="hidden">
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+   
+<!--End Of Feedback form-->
+
+<!--the footer section-->
+   
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="IMAGES/facebook.jpg" width="40px" height="40px" alt="Facebook"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="IMAGES/Xlogo.jfif" width="40px" height="40px" alt="X"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="IMAGES/InstagramLogo.jfif" width="40px" height="40px" alt="Instagram"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="IMAGES/YouTube.jfif" width="40px" height="40px" alt="YouTube"></a> 
+    </div>
+  
+ 
+    <div class="row">
+      <ul>
+          <li><a href="CONTACT.html">Contact us</a></li>
+          <li><a href="HOME.html">Our Services</a></li>
+          <li><a href="PRIVACY POLICY.html">Privacy Policy</a></li>
+          <li><a href="TERMS AND CONDITIONS.html">Terms & Conditions</a></li>
+          <li><a href="REVIEW.html">Review</a></li>
+      </ul>
+    </div>
+  
+      <div class="row">
+            <img src="IMAGES/warnerlogo.jfif" width="40px" height="40px">TM & © 2024 Warner Bros. Entertainment Inc. Warner Bros and its related entities. - All rights reserved || Designed By: Shadrack 
+      </div>
+    </div>
+  </footer>
+
+
+</html>
+
